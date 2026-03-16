@@ -4,22 +4,26 @@ Various Day to Day Scripts will be Stored Here
 1. Automated Backup Script: Create a script to automatically backup files or directories to a specified location.
 Example Code:
 
-``#!/bin/bash
+```
+#!/bin/bash
 backup_dir="/path/to/backup"
 source_dir="/path/to/source"
 timestamp=$(date +"%Y%m%d%H%M%S")
-tar -czf "$backup_dir/backup_$timestamp.tar.gz" "$source_dir"``
+tar -czf "$backup_dir/backup_$timestamp.tar.gz" "$source_dir"
+```
 
 
 2. Log Rotation Script: Write a script to rotate log files to prevent them from growing too large.
 Example Code:
-``#!/bin/bash
+```
+#!/bin/bash
 log_file="/path/to/logfile.log"
 max_size=1000000 # 1MB
 if [ $(wc -c < "$log_file") -gt $max_size ]; then
     mv "$log_file" "$log_file.old"
     touch "$log_file"
-fi``
+fi
+```
 4. System Monitoring Script: Develop a script to monitor system resource usage and send alerts if thresholds are exceeded.
 Example Code:
 
